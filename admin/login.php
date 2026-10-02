@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: index.php');
         exit;
     }
-    sleep(1);                                  // frena intentos por fuerza bruta
+    sleep(1);                                  
     $error = 'Usuario o contraseña incorrectos.';
 }
 ?>

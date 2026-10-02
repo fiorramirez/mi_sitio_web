@@ -1,7 +1,5 @@
 <?php
-// ============================================
 //  Configuración y conexión a MySQL (PDO)
-// ============================================
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -9,7 +7,7 @@ if (session_status() === PHP_SESSION_NONE) {
 $db_host = 'localhost';
 $db_name = 'sitio_personal';
 $db_user = 'root';   // usuario por defecto de XAMPP
-$db_pass = '';       // contraseña por defecto de XAMPP (vacía)
+$db_pass = '';       // contraseña por defecto de XAMPP (no tiene nada)
 
 try {
     $pdo = new PDO(

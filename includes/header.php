@@ -1,7 +1,5 @@
 <?php
-// Variables que cada página define antes de incluir este archivo:
-//   $titulo_pagina  -> texto del <title>
-//   $activa         -> nombre de la página actual (para resaltar el menú)
+
 require_once __DIR__ . '/config.php';
 $perfil_nav = $pdo->query('SELECT nombre_completo FROM perfil WHERE id = 1')->fetch();
 $nombre_nav = $perfil_nav['nombre_completo'] ?? 'Mi sitio';

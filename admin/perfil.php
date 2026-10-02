@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $foto = $perfil['foto'];
     if ($foto_nueva) {
-        borrar_imagen($perfil['foto']);   // quitamos la foto anterior
+        borrar_imagen($perfil['foto']);   
         $foto = $foto_nueva;
     } elseif (!empty($_POST['quitar_foto'])) {
         borrar_imagen($perfil['foto']);

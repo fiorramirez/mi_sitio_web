@@ -2,12 +2,12 @@
 require_once __DIR__ . '/../includes/config.php';
 exigir_login();
 
-/* ---------- Procesar formularios ---------- */
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     csrf_validar();
     $accion = $_POST['accion'] ?? '';
 
-    // ----- Eliminar -----
+    
     if ($accion === 'eliminar') {
         $id = (int)($_POST['id'] ?? 0);
         $stmt = $pdo->prepare('SELECT imagen FROM atestados WHERE id = ?');
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // ----- Crear o actualizar -----
+
     if ($accion === 'guardar') {
         $id          = (int)($_POST['id'] ?? 0);
         $titulo      = trim($_POST['titulo'] ?? '');
@@ -65,7 +65,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-/* ---------- Datos para mostrar ---------- */
 $editando = null;
 if (isset($_GET['editar'])) {
     $stmt = $pdo->prepare('SELECT * FROM atestados WHERE id = ?');
