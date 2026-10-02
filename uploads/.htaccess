@@ -1,0 +1,4 @@
+# Seguridad: en esta carpeta NO se puede ejecutar código PHP
+<FilesMatch "\.(php|phtml|php3|php5|phar)$">
+    Require all denied
+</FilesMatch>
